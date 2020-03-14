@@ -1,0 +1,35 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/* universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* boarders and paddings not added to the elements height and weight */
+}
+
+/* define font properties in body, so it inherits to all children */
+body { 
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+
+  padding: 30px;
+}
+
+.header {
+  height: 95vh; /* 95% percent of viewport height */
+  background-image: linear-gradient(to right bottom, #7ed56fc2, #27b485cc), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top; /* top of the background stay its position when window became small */
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
