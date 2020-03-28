@@ -1,0 +1,41 @@
+/* define font properties in body, so it inherits to all children */
+body { 
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
+
+  box-sizing: border-box;  /* boarders and paddings not added to the elements height and weight */
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+
+  backface-visibility: hidden; /* hidden when transforms */
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+  
+    animation-name: moveInLeft; /* variable name defined in @keyframes */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;  /* fast -> slow */
+    /* animation-iteration-count: 3; */
+    /* animation-delay: 3s; */
+  }
+  
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+  
+    animation: moveInRight 1s ease-out;
+  }
+}

@@ -21,66 +21,9 @@ html {
   font-size: 62.5%;
   /* 62.5% of 16px(default) is 10px, avoiding user change font size */ }
 
-/* define font properties in body, so it inherits to all children */
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #777;
-  padding: 3rem;
   box-sizing: border-box;
   /* boarders and paddings not added to the elements height and weight */ }
-
-.header {
-  height: 95vh;
-  /* 95% percent of viewport height */
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  /* top of the background stay its position when window became small */
-  position: relative;
-  /* for absolute position reference */
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    /* top and left are referenced to their parent; */
-    top: 40%;
-    left: 50%;
-    /* transform is referenced to itself */
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  /* hidden when transforms */
-  margin-bottom: 6rem; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 3.5rem;
-    animation-name: moveInLeft;
-    /* variable name defined in @keyframes */
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    /* fast -> slow */
-    /* animation-iteration-count: 3; */
-    /* animation-delay: 3s; */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.74rem;
-    animation: moveInRight 1s ease-out; }
 
 @keyframes moveInLeft {
   /* position animation starts */
@@ -118,6 +61,42 @@ body {
     opacity: 1;
     transform: translate(0);
     /* looks like original */ } }
+
+/* define font properties in body, so it inherits to all children */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
+  /* boarders and paddings not added to the elements height and weight */ }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* hidden when transforms */
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    /* variable name defined in @keyframes */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* fast -> slow */
+    /* animation-iteration-count: 3; */
+    /* animation-delay: 3s; */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.74rem;
+    animation: moveInRight 1s ease-out; }
 
 .btn {
   /* pseudo selector */ }
@@ -159,3 +138,28 @@ body {
   .btn--animated {
     animation: moveInBottom .5s ease-out .75s;
     animation-fill-mode: backwards; }
+
+.header {
+  height: 95vh;
+  /* 95% percent of viewport height */
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  /* top of the background stay its position when window became small */
+  position: relative;
+  /* for absolute position reference */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    /* top and left are referenced to their parent; */
+    top: 40%;
+    left: 50%;
+    /* transform is referenced to itself */
+    transform: translate(-50%, -50%);
+    text-align: center; }
