@@ -1,6 +1,5 @@
 .row {
   max-width: 114rem; // the size when having enough space, 100% when not enough
-  background-color: #eee;
   margin: 0 auto; // center
 
   &:not(:last-child) { // everything except the last child
